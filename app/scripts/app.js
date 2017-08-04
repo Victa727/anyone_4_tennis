@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name anyone4tennisApp
+ * @name anyone4TennisApp
  * @description
- * # anyone4tennisApp
+ * # anyone4TennisApp
  *
  * Main module of the application.
  */
 angular
-  .module('anyone4tennisApp', [
+  .module('anyone4TennisApp', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -36,7 +36,6 @@ angular
         templateUrl: 'views/map.html',
         controller: 'MapCtrl',
         controllerAs: 'map',
-        // controllerAs: 'vm'
       })
       .otherwise({
         redirectTo: '/'

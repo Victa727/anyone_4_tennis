@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name anyone4tennisApp.controller:AboutCtrl
+ * @name anyone4TennisApp.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the anyone4tennisApp
+ * Controller of the anyone4TennisApp
  */
-angular.module('anyone4tennisApp')
+angular.module('anyone4TennisApp')
   .controller('AboutCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',

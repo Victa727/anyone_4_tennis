@@ -2,13 +2,12 @@
 
 /**
  * @ngdoc function
- * @name anyone4tennisApp.controller:MapCtrl
+ * @name anyone4TennisApp.controller:MapCtrl
  * @description
  * # MapCtrl
- * Controller of the anyone4tennisApp
+ * Controller of the anyone4TennisApp
  */
-/** var MapCtrl = angular.module('MapCtrl',['ngMap']);  */
-angular.module('anyone4tennisApp')
+angular.module('anyone4TennisApp')
   .controller('MapCtrl',function(NgMap) {
     NgMap.getMap().then(function(map) {
       console.log('markers', map.markers);
