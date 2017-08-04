@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name anyone4TennisApp
+ * @name anyone4tennisApp
  * @description
- * # anyone4TennisApp
+ * # anyone4tennisApp
  *
  * Main module of the application.
  */
 angular
-  .module('anyone4TennisApp', [
+  .module('anyone4tennisApp', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -17,7 +17,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ngMap'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -30,6 +31,12 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
+      })
+      .when('/map', {
+        templateUrl: 'views/map.html',
+        controller: 'MapCtrl',
+        controllerAs: 'map',
+        // controllerAs: 'vm'
       })
       .otherwise({
         redirectTo: '/'
