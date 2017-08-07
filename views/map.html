@@ -1,30 +1,14 @@
-<div  ng-controller="MapCtrl">
-  <ng-map class="map" default-style="false" center="seattle"
-     map-type-control="false">
+<div  ng-controller="MapCtrl as vm">
+  <ng-map class="map" default-style="false" center="center=current-position"
+  geo-fallback-center="[47.66, -122.34]"
+  geo-callback="vm.callbackFunc('you')">
+
 
            <custom-control class="searchControl searchInput" position="TOP_CENTER">
              <a ui-sref="map">
                  <h1>Find A Tennis Court</h1>
                  </a>
-            <!--     <h3 ng-show="currentUser"> Hi {{currentUser.firstname}} <a ui-sref="user-profile" ng-click="logout()">Logout</a></h3>
 
-             <input places-auto-complete size=80
-               ng-model="vm.address"
-               component-restrictions="{country:'us'}"
-               on-place-changed="vm.placeChanged()"
-              />
-           </custom-control>
-
-           <custom-control position="TOP_RIGHT">
-             <a ui-sref="user-profile">
-                 <h1>User Profile</h1>
-                 </a>
-           </custom-control>
-           <custom-control ng-show = "currentUser" position="TOP_LEFT">
-             <a ui-sref="add-a-resource">
-                 <h1>Add A Resource</h1>
-                 </a>
-           </custom-control> -->
 
 
    </ng-map>      <!-- close map -->
