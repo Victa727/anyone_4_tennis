@@ -7,6 +7,8 @@ var $ = require('gulp-load-plugins')();
 var openURL = require('open');
 var lazypipe = require('lazypipe');
 var rimraf = require('rimraf');
+var uglify = require('gulp-uglify');
+var usemin = require('gulp-usemin');
 var wiredep = require('wiredep').stream;
 var runSequence = require('run-sequence');
 
@@ -70,6 +72,12 @@ var styles = lazypipe()
 gulp.task('styles', function () {
   return gulp.src(paths.styles)
     .pipe(styles());
+});
+
+gulp.task('usemin', function() {
+  return gulp.src("map-gulp-usemin.html")
+    .pipe(usemin({js: [uglify]}))
+    .pipe(gulp.dest('map-gulp-usemin/'));
 });
 
 gulp.task('lint:scripts', function () {
