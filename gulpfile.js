@@ -8,7 +8,6 @@ var openURL = require('open');
 var lazypipe = require('lazypipe');
 var rimraf = require('rimraf');
 var uglify = require('gulp-uglify');
-var usemin = require('gulp-usemin');
 var wiredep = require('wiredep').stream;
 var runSequence = require('run-sequence');
 
