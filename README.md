@@ -9,4 +9,4 @@ Run `gulp build` for building and `gulp serve` for preview.
 
 ## Testing
 
-Running `grunt test` will run the unit tests with karma.
+Running `gulp test` will run the unit tests with karma.
