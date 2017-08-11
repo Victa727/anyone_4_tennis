@@ -5,7 +5,7 @@ version 0.16.0.
 
 ## Build & development
 
-Run `grunt build` for building and `gulp serve` for preview.
+Run `gulp build` for building and `gulp serve` for preview.
 
 ## Testing
 
