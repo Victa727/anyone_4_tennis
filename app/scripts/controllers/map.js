@@ -18,4 +18,4 @@
        console.log('I know where '+ param +' are. ' + vm.message);
        console.log('You are at' + vm.map.getCenter());
      };
- });
+});
