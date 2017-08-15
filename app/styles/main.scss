@@ -8,9 +8,16 @@
   padding: 0.2em 0;
  }
 
+ body {
+   padding: 0;
+   background-color: transparent;
+   background-size: cover;
+   background-repeat: no-repeat;
+ }
 
 
 body {
+  overflow-x: hidden;
   padding: 0;
   margin:  0;
   width:75vw;
@@ -61,10 +68,7 @@ body {
 }
 
 /* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
+
 
 /* Supporting marketing content */
 .marketing {
