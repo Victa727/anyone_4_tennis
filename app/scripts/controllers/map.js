@@ -9,6 +9,7 @@
  */
  angular.module('anyone4TennisApp')
    .controller('MapCtrl',function(NgMap) {
+     var map;
      var vm = this;
      vm.types = "['establishment']";
      vm.placeChanged = function() {
