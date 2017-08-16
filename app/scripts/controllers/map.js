@@ -8,14 +8,17 @@
  * Controller of the anyone4TennisApp
  */
  angular.module('anyone4TennisApp')
-   .controller('MapCtrl',function(NgMap) {
+   .controller('MapCtrl',function($scope,NgMap) {
      var vm = this;
      vm.types = "['establishment']";
+     vm.mybounds = {radius: 8047};
+
      vm.placeChanged = function() {
        vm.place = this.getPlace();
+       console.log(vm.place);
        console.log('location', vm.place.geometry.location);
        vm.map.setCenter(vm.place.geometry.location);
-     vm.message = 'You can not hide. :)';
+       vm.message = 'You can not hide. :)';
      NgMap.getMap().then(function(map) {
        vm.map = map;
        });
