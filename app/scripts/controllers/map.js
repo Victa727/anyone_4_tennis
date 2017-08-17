@@ -13,13 +13,18 @@
   //   vm.types = "['establishment']";
   //   vm.mybounds = {radius: 8047};
 
+  vm.callbackFunc = function(param) {
+   console.log('I know where '+ param +' are. ' + vm.message);
+   console.log('You are at' + vm.map.getCenter());
+};
+
 // Places Changed
      vm.placeChanged = function() {
        vm.place = this.getPlace();
-       console.log(vm.place);
-       console.log('location', vm.place.geometry.location);
+      //  console.log(vm.place);
+      //  console.log('location', vm.place.geometry.location);
        vm.home=vm.map.getCenter();
-       vm.courtData=current.querry({
+       vm.tennisData=current.querry({
          lat:vm.home.lat(),
          lng:vm.home.lng()
        });
@@ -32,26 +37,24 @@
        vm.map = map;
        });
 
-       
+
 
 // Info Window Function
 
-       vm.showDetail = function (e, courts) {
-       vm.courts = courts;
-       vm.map.showInfoWindow('foo-iw', courts);
+       vm.showDetail = function (e, tennis) {
+       vm.tennis = tennis;
+       vm.map.showInfoWindow('foo-iw', tennis);
        };
 
 
          vm.home=vm.map.getCenter();
-         vm.courtData=current.querry({
+         vm.tennisData=current.querry({
            lat:vm.home.lat(),
            lng:vm.home.lng()
            });
 
-       vm.callbackFunc = function(param) {
-       console.log('I know where '+ param +' are. ' + vm.message);
-       console.log('You are at' + vm.map.getCenter());
-     };
+
+
 
 
 };

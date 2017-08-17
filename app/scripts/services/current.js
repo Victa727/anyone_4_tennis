@@ -15,7 +15,7 @@ angular.module('anyone4TennisApp')
 
 
     // Public API here
-    return $resource('https://maps.googleapis.com/maps/api/place/nearysearch/json?location=:lat,:lng&radius=8047&keyword=public+tennis+courts&key=AIzaSyDIHpb4W8x1yLiPkg8KGAZJFrEYZfNl47s&callback=initMap',{},{
+    return $resource('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=:lat,:lng&radius=8047&keyword=tennis+courts&key=AIzaSyDIHpb4W8x1yLiPkg8KGAZJFrEYZfNl47s&callback=initMap',{},{
       query: {
          method:'GET',
          params:{

@@ -13,19 +13,19 @@
                />
             </custom-control>
 
-            <marker position="[{{courts.geometry.location.lat}}, {{courts.geometry.location.lng}}]"
-                   ng-repeat="courts in vm.courtsData.results"
-                    on-click="vm.showDetail(courts)"
-                     title="{{courts.name}}"
+            <marker position="[{{tennis.geometry.location.lat}}, {{tennis.geometry.location.lng}}]"
+                   ng-repeat="tennis in vm.tennisData.results"
+                    on-click="vm.showDetail(tennis)"
+                     title="{{tennis.name}}"
                      animation="DROP">
                    </marker>
 
-                  <info-window id="foo-iw" position="{{vm.courts.geometry.location.lat}},{{vm.courts.geometry.location.lng}}">
+                  <info-window id="foo-iw" position="{{vm.tennis.geometry.location.lat}},{{vm.tennis.geometry.location.lng}}">
                 <div  class="info-window " ng-non-bindable="" >
                   <p>
-                  Name: {{vm.courts.name}}<br/>
-                  Address: {{vm.courts.vicinity}}<br/>
-                  <a href="https://www.google.com/maps/place/?q=place_id:{{vm.courts.place_id}}">Google Maps</a>
+                  Name: {{vm.tennis.name}}<br/>
+                  Address: {{vm.tennis.vicinity}}<br/>
+                  <a href="https://www.google.com/maps/place/?q=place_id:{{vm.tennis.place_id}}">Google Maps</a>
 
                 </p>
                 </div>
