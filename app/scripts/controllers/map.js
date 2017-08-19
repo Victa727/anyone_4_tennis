@@ -10,13 +10,27 @@
  angular.module('anyone4TennisApp')
    .controller('MapCtrl',function($timeout,$scope,current,NgMap) {
      var vm = this;
+
+     // Get Map
+    NgMap.getMap().then(function(map) {
+      vm.map = map;
+
+      vm.home=vm.map.getCenter();
+      vm.tennisData=current.query({
+        lat:vm.home.lat(),
+        lng:vm.home.lng()
+        });
+
+    });
+
+
   //   vm.types = "['establishment']";
   //   vm.mybounds = {radius: 8047};
 
-  vm.callbackFunc = function(param) {
-   console.log('I know where '+ param +' are. ' + vm.message);
-   console.log('You are at' + vm.map.getCenter());
-};
+//  vm.callbackFunc = function(param) {
+   // console.log('I know where '+ param +' are. ' + vm.message);
+   //console.log('You are at' + vm.map.getCenter());
+// };
 
 // Places Changed
      vm.placeChanged = function() {
@@ -24,7 +38,7 @@
       //  console.log(vm.place);
       //  console.log('location', vm.place.geometry.location);
        vm.home=vm.map.getCenter();
-       vm.tennisData=current.querry({
+       vm.tennisData=current.query({
          lat:vm.home.lat(),
          lng:vm.home.lng()
        });
@@ -32,10 +46,6 @@
     //   vm.message = 'You can not hide. :)';
 // Close placeChanged
 
-// Get Map
-     NgMap.getMap().then(function(map) {
-       vm.map = map;
-       });
 
 
 
@@ -48,7 +58,7 @@
 
 
          vm.home=vm.map.getCenter();
-         vm.tennisData=current.querry({
+         vm.tennisData=current.query({
            lat:vm.home.lat(),
            lng:vm.home.lng()
            });
