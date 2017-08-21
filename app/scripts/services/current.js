@@ -15,7 +15,7 @@ angular.module('anyone4TennisApp')
 
 
     // Public API here
-    return $resource('http://rashrewind.com/proxy.php?csurl=https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=:lat,:lng&radius=8047&keyword=public+tennis+courts&key=AIzaSyDIHpb4W8x1yLiPkg8KGAZJFrEYZfNl47s&callback=ininitMap',{},{
+    return $resource('http://rashrewind.com/proxy.php?csurl=https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=:lat,:lng&radius=8047&keyword=tennis+courts&key=AIzaSyDIHpb4W8x1yLiPkg8KGAZJFrEYZfNl47s&callback=ininitMap',{},{
       query: {
          method:'GET',
          params:{
