@@ -1,7 +1,14 @@
+
+
+
 // bower:scss
+// @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// @import "font-awesome/scss/font-awesome.scss";
 // endbower
 
- .browsehappy {
+
+
+.browsehappy {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
@@ -11,10 +18,10 @@
  body {
   padding: 0;
   background-color: transparent;
-  background-image: url("../images/1.jpg");
-  background-size: cover;
+  background-image: url("../images/Tennis-burj-al-arab-dubai.jpg");
+  background-size: contain;
   background-repeat: no-repeat;
-  color: yellow;
+
 }
 
 
@@ -29,9 +36,9 @@ body {
   }
  ng-map {
     padding: 0;
-    margin:  15px;
+    margin:  0;
     width:75vw;
-    height:100vh;
+    height:81vh;
     position: relative;
   }
 
@@ -74,7 +81,7 @@ body, html {
 }
 
 .container-narrow > hr {
-  margin: 30px 0;
+ margin: 30px 0;
 }
 
 /* Main marketing message and sign up button */
@@ -82,18 +89,18 @@ body, html {
 
 /* Supporting marketing content */
 .marketing {
-  margin: 40px 0;
+  margin:  0;
 
   p + h4 {
-    margin-top: 28px;
+    margin-top: 0;
   }
 }
 
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
+@media screen  {
+  /*.container {
     max-width: 730px;
-  }
+  } */
 
   /* Remove the padding we set earlier */
   .header,
@@ -102,10 +109,15 @@ body, html {
     padding-left: 0;
     padding-right: 0;
   }
-  /* Space out the masthead */
+  /* Space out the masthead
   .header {
     margin-bottom: 30px;
-  }
+  } */
+
+  h1 {
+    color: blue;
+}
+
   /* Jumbotron */
   .jumbotron {
      background-color: rgb(255,255,255);

@@ -2,30 +2,38 @@
 <div  ng-controller="MapCtrl as vm">
   <ng-map class="map" default-style="false" center="[47.66, -122.34]"
   geo-fallback-center="[47.66, -122.34]"
-  geo-callback="vm.callbackFunc('you')">
+  geo-callback="placeMarker()"
+  geo-callback="vm.callbackFunc('you')"
+  >
 
    <custom-control class="searchControl searchInput" position="TOP_CENTER">
+
 
      <input places-auto-complete size=80
                 ng-model="vm.address"
                 component-restrictions="{country:'us'}"
                 on-place-changed="vm.placeChanged()"
                />
+               <p>{{vm.address}}</p>
             </custom-control>
 
+
+
             <marker position="[{{tennis.geometry.location.lat}}, {{tennis.geometry.location.lng}}]"
+            id={{tennis.name}}
                    ng-repeat="tennis in vm.tennisData.results"
                     on-click="vm.showDetail(tennis)"
                      title="{{tennis.name}}"
                      animation="DROP">
                    </marker>
 
-                  <info-window id="foo-iw" position="{{vm.tennis.geometry.location.lat}},{{vm.tennis.geometry.location.lng}}">
+                  <info-window id="tennisInfo" position="{{vm.tennis.geometry.location.lat}},{{vm.tennis.geometry.location.lng}}">
                 <div  class="info-window " ng-non-bindable="" >
                   <p>
                   Name: {{vm.tennis.name}}<br/>
                   Address: {{vm.tennis.vicinity}}<br/>
                   <a href="https://www.google.com/maps/place/?q=place_id:{{vm.tennis.place_id}}">Google Maps</a>
+
 
                 </p>
                 </div>

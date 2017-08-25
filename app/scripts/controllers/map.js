@@ -21,6 +21,15 @@
         lng:vm.home.lng()
         });
 
+
+
+        $scope.placeMarker = function(){
+             console.log(this.getPlace());
+             var loc = this.getPlace().geometry.location;
+             $scope.latlng = [loc.lat(), loc.lng()];
+             $scope.center = [loc.lat(), loc.lng()];
+         };
+
     });
 
 
@@ -49,13 +58,6 @@
 
 
 
-// Info Window Function
-
-       vm.showDetail = function (e, tennis) {
-       vm.tennis = tennis;
-       vm.map.showInfoWindow('foo-iw', tennis);
-       };
-
 
          vm.home=vm.map.getCenter();
          vm.tennisData=current.query({
@@ -66,6 +68,18 @@
 
 
 
-
 };
+// vm.showMarkerData = function (e, tennis) {
+//   vm.tennis = tennis;
+//   vm.map.showInfoWindow('tennisInfo',tennis.id);
+// };
+
+// Info Window Function
+
+       vm.showDetail = function (e, tennis) {
+       vm.tennis = tennis;
+       vm.map.showInfoWindow('tennisInfo', tennis);
+       };
+
+
 });
